@@ -28,6 +28,12 @@ scotchApp.config(function ($routeProvider) {
         controller: 'hotelController'
     })
 
+    .when('/room', {
+        templateUrl: 'src/templates/room.html',
+        controller: 'roomController'
+    })
+
+
     .when('/me', {
         templateUrl: 'src/templates/me.html',
         controller: 'meController'
@@ -53,5 +59,9 @@ scotchApp.controller('meController', function ($scope) {
 });
 
 scotchApp.controller('hotelController', function ($scope) {
+    $scope.message = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni veritatis quaerat culpa sapiente maiores ducimus voluptatem voluptatibus dolor impedit quibusdam temporibus cumque sit natus, ad iusto reprehenderit eum, at. Voluptatibus!';
+});
+
+scotchApp.controller('roomController', function ($scope) {
     $scope.message = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni veritatis quaerat culpa sapiente maiores ducimus voluptatem voluptatibus dolor impedit quibusdam temporibus cumque sit natus, ad iusto reprehenderit eum, at. Voluptatibus!';
 });
