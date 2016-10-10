@@ -6,7 +6,7 @@ scotchApp.config(function ($routeProvider) {
     $routeProvider
 
     // route for the home page
-        .when('/', {
+    .when('/', {
         templateUrl: 'src/templates/home.html',
         controller: 'mainController'
     })
@@ -19,13 +19,19 @@ scotchApp.config(function ($routeProvider) {
 
     // route for the contact page
     .when('/contact', {
-            templateUrl: 'src/templates/contact.html',
-            controller: 'contactController'
-        })
-        .when('/me', {
-            templateUrl: 'src/templates/me.html',
-            controller: 'meController'
-        });
+        templateUrl: 'src/templates/contact.html',
+        controller: 'contactController'
+    })
+
+    .when('/hotel', {
+        templateUrl: 'src/templates/hotel.html',
+        controller: 'hotelController'
+    })
+
+    .when('/me', {
+        templateUrl: 'src/templates/me.html',
+        controller: 'meController'
+    });
 });
 
 // create the controller and inject Angular's $scope
@@ -44,4 +50,8 @@ scotchApp.controller('contactController', function ($scope) {
 
 scotchApp.controller('meController', function ($scope) {
     $scope.message = 'hello, its me - mario';
+});
+
+scotchApp.controller('hotelController', function ($scope) {
+    $scope.message = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni veritatis quaerat culpa sapiente maiores ducimus voluptatem voluptatibus dolor impedit quibusdam temporibus cumque sit natus, ad iusto reprehenderit eum, at. Voluptatibus!';
 });
