@@ -1,13 +1,35 @@
+$primary-color: #9ae29c
+$primary-color-hover: #7ab17b
+$button-color: #5a85fb
+
+::-webkit-scrollbar
+    width: 0px
+
+
+#myNavbar li
+    // margin-left: 10%
+    font-size: 1.5em
+
+.nav-container
+    margin-left: 0
 .search-form
     width: 100%
     height: auto
-    background-color: #2bcaca
+    background-color: $primary-color
 
 .material-card
     background-color: white
     margin: 10px
     padding: 10px
     box-shadow: 0 0 10px rgba(0,0,0,0.5)
+    font-size: 0.9em
+
+.material-card a
+    border-radius: 2px
+    font-weight: bold
+    letter-spacing: 1px
+    background-color: #fff
+    color: $button-color
 
 .shadow
     box-shadow: 0px -1px 37px -6px rgba(0,0,0,0.75)
@@ -31,10 +53,10 @@
     padding: 0 8px 0 10px
     border-left: solid 1px #ccc
 
-#custom-search-input button:hover
-    border: 0
-    box-shadow: none
-    border-left: solid 1px #ccc
+// #custom-search-input button:hover
+//     border: 0
+//     box-shadow: none
+//     border-left: solid 1px #ccc
 
 #custom-search-input .glyphicon-search
     font-size: 23px
@@ -42,14 +64,14 @@
 /* Makes images fully responsive
 
 .main-color
-    background-color: #2bcaca
+    background-color: $primary-color
 
 .order
     border: none
     outline: none
 
 .order:hover
-    background-color: #239c9c
+    background-color: $primary-color-hover
 
 .thumbnail
   > img, a > img
@@ -78,6 +100,12 @@
   color: #fff
   text-align: left
   font-size: 0.5em
+  width: 100%
+  height: 20%
+  overflow: hidden
+
+.carousel-caption p
+    overflow-y: scroll
 
 .carousel-indicators
   position: absolute
