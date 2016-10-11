@@ -39,7 +39,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('js', function () {
-    return gulp.src(['src/js/*.js'])
+    return gulp.src(['src/js/app/*.js', 'src/js/services/*.js', 'src/js/controllers/*.js'])
     .pipe(concat('script.min.js'))
     //.pipe(uglify()) //compression js
     .pipe(gulp.dest('dist/js'));
