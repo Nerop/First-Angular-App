@@ -1,5 +1,59 @@
-<div class="jumbotron text-center">
-    <h1>Mario Page</h1>
+<div class="container">
+    <div class="row">
+        <div class="col m4 s12">
+            <img class="responsive-img" src="http://placehold.it/450x350" alt="">
+        </div>
+        <div class="col m8 s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input value="Максим" id="first_name" type="text" class="validate">
+                    <label for="first_name">Имя</label>
+                </div>
+                <div class="input-field col s6">
+                    <input value="Семенов" id="last_name" type="text" class="validate">
+                    <label for="last_name">Фамилия</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input value="*******" id="password" type="password" class="validate">
+                    <label for="password">Пароль</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input value="maxsem@gmail.com" id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                </div>
+            </div>
+            <a class="waves-effect waves-light btn">Сохранить</a>
+        </div>
+    </div>
+    <div class="row">
+        <table class="highlight responsive-table">
+            <thead>
+                <tr>
+                    <th data-field="id">Отель</th>
+                    <th data-field="in">Дата заезда</th>
+                    <th data-field="out">Дата выезда</th>
+                    <th data-field="price">Цена</th>
+                </tr>
+            </thead>
 
-    <p>{{ message }}</p>
+            <tbody>
+                <tr>
+                    <td>Rixos</td>
+                    <td>12.07.2016</td>
+                    <td>19.07.2016</td>
+                    <td>350$</td>
+                </tr>
+                <tr>
+                    <td>Alvin</td>
+                    <td>24.11.2016</td>
+                    <td>05.12.2016</td>
+                    <td>590$</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
