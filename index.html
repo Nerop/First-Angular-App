@@ -7,70 +7,61 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- SCROLLS -->
-    <link rel="stylesheet" href="dist/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="dist/css/bootstrap.min.css" /> -->
     <link rel="stylesheet" href="dist/css/font-awesome.min.css" />
     <link href="dist/css/angular-carousel.min.css" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="dist/css/materialize.min.css" media="screen,projection" />
     <link rel="stylesheet" href="dist/css/bundle.min.css">
 
     <!-- SPELLS -->
     <script src='dist/js/jquery.min.js'></script>
-    <script src="dist/js/bootstrap.min.js"></script>
+    <!-- <script src="dist/js/bootstrap.min.js"></script> -->
     <script src="dist/js/angular.min.js"></script>
     <script src="dist/js/angular-route.min.js"></script>
     <script src="dist/js/angular-touch.min.js"></script>
     <script src="dist/js/angular-carousel.min.js"></script>
-    <script src="src/js/script.js"></script>
+    <script type="text/javascript" src="dist/js/materialize.min.js"></script>
+    <script src="dist/js/script.min.js"></script>
 </head>
 
 <!-- define angular controller -->
 
 <body ng-controller="mainController">
 
-    <nav class="navbar navbar-default">
-        <div class="container nav-container">
-            <div class="navbar-header">
-                <!-- <a class="navbar-brand" href="/">Сайт</a> -->
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <ul class="nav navbar-nav">
-                                <li><a href="#"><i class="fa fa-home"></i> Главная</a></li>
-                                <li><a href="#about"><i class="fa fa-shield"></i> О нас</a></li>
-                                <li><a href="#contact"><i class="fa fa-comment"></i> Контакты</a></li>
-                                <li><a href="#me"><i class="fa fa-user"></i> Мой профиль</a></li>
-                                <li>
+    <nav>
+        <div class="nav-wrapper">
+            <!-- <a href="#!" class="brand-logo">Logo</a> -->
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="left hide-on-med-and-down">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#contact">Контакты</a></li>
+                <li><a href="#me">Мой профиль</a></li>
+            </ul>
 
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4">
-                            <div id="custom-search-input">
-                                <div class="input-group">
-                                    <input type="text" class="form-control input-lg" placeholder="Поиск" />
-                                    <span class="input-group-btn">
-                                    <button class="btn btn-info btn-lg" type="button">
-                                    <i class="glyphicon glyphicon-search"></i>
-                                    </button>
-                                </span>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#contact">Контакты</a></li>
+                <li><a href="#me">Мой профиль</a></li>
+            </ul>
         </div>
     </nav>
 
     <div id="main">
+    <div class="container">
+        <div class="row">
+            <form>
+                <div class="input-field">
+                    <input placeholder="Искать" id="search" type="search" required>
+                    <!-- <label for="search"><i class="material-icons">search</i></label> -->
+                    <i class="material-icons">close</i>
+                </div>
+            </form>
+        </div>
+    </div>
+
 
         <!-- angular templating -->
         <!-- this is where content will be injected -->
@@ -82,6 +73,12 @@
 
     </footer>
 
+    <script>
+        $(document).ready(function() {
+            $(".button-collapse").sideNav();
+
+        });
+    </script>
 </body>
 
 </html>
