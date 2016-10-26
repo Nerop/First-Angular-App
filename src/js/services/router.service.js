@@ -35,6 +35,11 @@ scotchApp.config(function ($routeProvider) {
         controller: 'successfulController'
     })
 
+    .when('/5stars', {
+        templateUrl: 'src/templates/5stars.html',
+        controller: '5starsController'
+    })
+
     .when('/me', {
         templateUrl: 'src/templates/me.html',
         controller: 'meController'
