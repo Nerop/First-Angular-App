@@ -40,6 +40,31 @@ scotchApp.config(function ($routeProvider) {
         controller: '5starsController'
     })
 
+    .when('/404', {
+        templateUrl: 'src/templates/404.html',
+        controller: '404Controller'
+    })
+
+    .when('/4stars', {
+        templateUrl: 'src/templates/4stars.html',
+        controller: '4starsController'
+    })
+
+    .when('/3stars', {
+        templateUrl: 'src/templates/3stars.html',
+        controller: '3starsController'
+    })
+
+    .when('/paris', {
+        templateUrl: 'src/templates/paris.html',
+        controller: 'parisController'
+    })
+
+    .when('/germany', {
+        templateUrl: 'src/templates/germany.html',
+        controller: 'germanyController'
+    })
+
     .when('/me', {
         templateUrl: 'src/templates/me.html',
         controller: 'meController'
