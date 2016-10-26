@@ -1,5 +1,4 @@
 scotchApp.controller('mainController', function ($scope) {
-
     function showResultsOfSearch(query) {
         switch (query.toUpperCase()) {
         case '5 ЗВЕЗД':
