@@ -1,4 +1,4 @@
-scotchApp.controller('meController', function ($scope) {
+scotchApp.controller('hotelsownerController', function ($scope) {
 
     $('select').material_select();
     $('.change-user').change(function () {

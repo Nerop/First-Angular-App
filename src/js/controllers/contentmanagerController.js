@@ -1,4 +1,4 @@
-scotchApp.controller('meController', function ($scope) {
+scotchApp.controller('contentmanagerController', function ($scope) {
 
     $('select').material_select();
     $('.change-user').change(function () {

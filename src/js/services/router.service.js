@@ -65,6 +65,21 @@ scotchApp.config(function ($routeProvider) {
         controller: 'germanyController'
     })
 
+    .when('/admin', {
+        templateUrl: 'src/templates/admin.html',
+        controller: 'adminController'
+    })
+
+    .when('/contentmanager', {
+        templateUrl: 'src/templates/contentmanager.html',
+        controller: 'contentmanagerController'
+    })
+
+    .when('/hotelsowner', {
+        templateUrl: 'src/templates/hotelsowner.html',
+        controller: 'hotelsownerController'
+    })
+
     .when('/me', {
         templateUrl: 'src/templates/me.html',
         controller: 'meController'
