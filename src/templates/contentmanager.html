@@ -1,13 +1,13 @@
 <div class="container">
     <div class="input-field col s6 m2 l2 change-user">
         <select>
-          <option value="1">Обычный пользователь</option>
-          <option value="2">Администратор</option>
-          <option value="3">Контентный менеджер</option>
-          <option value="4">Вледелец отеля</option>
+            <option value="1">Обычный пользователь</option>
+            <option value="2">Администратор</option>
+            <option value="3">Контентный менеджер</option>
+            <option value="4">Вледелец отеля</option>
         </select>
         <label>Выберите тип пользователя</label>
-      </div>
+    </div>
 
     <div class="row">
         <div class="col m4 s12">
@@ -37,34 +37,105 @@
                 </div>
             </div>
             <a class="waves-effect waves-light btn">Сохранить</a>
+            <a id="btn-report" data-target="modal3" class="btn modal-trigger waves-effect waves-light">Сформировать отчет</a>
+            <a id="btn-add-hotel" data-target="modal4" class="btn modal-trigger waves-effect waves-light">Добавить отель</a>
         </div>
     </div>
-    <div class="row">
-        <h3>Мои поездки</h3>
-        <table class="highlight responsive-table">
-            <thead>
-                <tr>
-                    <th data-field="id">Отель</th>
-                    <th data-field="in">Дата заезда</th>
-                    <th data-field="out">Дата выезда</th>
-                    <th data-field="price">Цена</th>
-                </tr>
-            </thead>
+</div>
+<!-- Modal Structure -->
+<div id="modal3" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="first_name" type="text" class="validate">
+                        <label for="first_name">Почта владельца отеля</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m6">
+                        <label for="in-date">С</label>
+                        <input id="in-date" type="date" name="calendar">
+                    </div>
+                    <div class="col m6">
+                        <label for="out-date">По</label>
+                        <input id="out-date" type="date" name="calendar">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select>
+                            <!-- <option value="" disabled selected>Укажите количество человек</option> -->
+                            <option value="1">Статистика по отелям</option>
+                            <option value="2">Общий доход</option>
+                            <option value="3">Статистика переходов с рекламы</option>
+                            <option value="3">Статистика по акциям</option>
+                        </select>
+                        <label>Укажите тип отчета</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <a class="waves-effect waves-light btn btn-order">Отправить</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a class="modal-action modal-close waves-effect waves-green btn-flat ">Отмена</a>
+    </div>
+</div>
 
-            <tbody>
-                <tr>
-                    <td><a href="#hotel">Rixos</a></td>
-                    <td>12.07.2016</td>
-                    <td>19.07.2016</td>
-                    <td>350$</td>
-                </tr>
-                <tr>
-                    <td><a href="#hotel">Alvin</a></td>
-                    <td>24.11.2016</td>
-                    <td>05.12.2016</td>
-                    <td>590$</td>
-                </tr>
-            </tbody>
-        </table>
+<div id="modal4" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="first_name" type="text" class="validate">
+                        <label for="first_name">Название отеля</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="last_name" type="text" class="validate">
+                        <label for="last_name">Расположение</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="patron_name" type="text" class="validate">
+                        <label for="patron_name">Количество звезд</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="Login">
+                        <label for="Login">Количество номеров</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="Login">
+                        <label for="Login">Количество номеров типа "люкс"</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="Login">
+                        <label for="Login">Количество номеров типа "стандарт"</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <form action="">
+                            <input type="file" name="img" multiple>
+                            <input type="submit">
+                        </form>
+                        <!-- <label>Загрузить фотографии</label> -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <a class="waves-effect waves-light btn btn-order">Сохранить</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a class="modal-action modal-close waves-effect waves-green btn-flat ">Отмена</a>
     </div>
 </div>

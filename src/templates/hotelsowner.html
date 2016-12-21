@@ -37,6 +37,7 @@
                 </div>
             </div>
             <a class="waves-effect waves-light btn">Сохранить</a>
+            <a id="btn-request-report" data-target="modal5" class="btn modal-trigger waves-effect waves-light">Запросить отчет</a>
         </div>
     </div>
     <div class="row">
@@ -66,5 +67,43 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+</div>
+<div id="modal5" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="col m6">
+                        <label for="in-date">С</label>
+                        <input id="in-date" type="date" name="calendar">
+                    </div>
+                    <div class="col m6">
+                        <label for="out-date">По</label>
+                        <input id="out-date" type="date" name="calendar">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select>
+                          <!-- <option value="" disabled selected>Укажите количество человек</option> -->
+                          <option value="1">Статистика по отелям</option>
+                          <option value="2">Общий доход</option>
+                          <option value="3">Статистика переходов с рекламы</option>
+                          <option value="3">Статистика по акциям</option>
+                        </select>
+                        <label>Укажите тип отчета</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                      <a class="waves-effect waves-light btn btn-order">Отправить</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a class="modal-action modal-close waves-effect waves-green btn-flat ">Отмена</a>
     </div>
 </div>

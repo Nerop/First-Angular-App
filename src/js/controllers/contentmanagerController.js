@@ -16,5 +16,21 @@ scotchApp.controller('contentmanagerController', function ($scope) {
         }
     });
 
+    $('#btn-report').leanModal({
+        dismissible: false
+    });
+    $('#btn-report').click(function () {
+        console.log('jasd');
+        $('#modal3').modal('open');
+    });
+
+    $('#btn-add-hotel').leanModal({
+        dismissible: false
+    });
+    $('#btn-add-hotel').click(function () {
+        console.log('jasd');
+        $('#modal4').modal('open');
+    });
+
     $scope.message = 'hello, its me - mario';
 });

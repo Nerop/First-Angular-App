@@ -16,5 +16,13 @@ scotchApp.controller('hotelsownerController', function ($scope) {
         }
     });
 
+    $('#btn-request-report').leanModal({
+        dismissible: false
+    });
+    $('#btn-request-report').click(function () {
+        console.log('jasd');
+        $('#modal5').modal('open');
+    });
+
     $scope.message = 'hello, its me - mario';
 });
